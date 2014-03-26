@@ -1,7 +1,7 @@
 
 public class Element 
 {
-	private static String[] elements = {"Fire", "Water", "Grass", "Light", "Dark"};
+	private static String[] elements = {"Fire", "Water", "Grass", "Air", "Earth"};
 	private String name;
 	private int iD;
 	public Element(int iD)
