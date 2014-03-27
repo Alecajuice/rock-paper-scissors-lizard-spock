@@ -9,10 +9,26 @@ public class Team
 	
 	public boolean battle(Team other)
 	{
+		int score = 0;
 		Element[] otherTeam = other.getTeam();
 		for(int i = 0; i < Max(otherTeam.length, team.length)); i++)
 		{
-			
+			if(team[i].compare(otherTeam[i]))
+			{
+				score ++;
+			}
+			else if(otherTeam[i].compare(team[i]))
+			{
+				score --;
+			}
+		}
+		if(score > 0)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
 		}
 	}
 	
