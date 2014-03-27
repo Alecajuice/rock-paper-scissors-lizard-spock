@@ -60,5 +60,9 @@ public class Element
 	{
 		this.iD = iD;
 	}
+	public int getID()
+	{
+		return iD;
+	}
 }
 
