@@ -1,10 +1,10 @@
 import java.awt.Color;
+import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 public class Main extends JPanel implements KeyListener, MouseListener, MouseMotionListener
@@ -12,6 +12,8 @@ public class Main extends JPanel implements KeyListener, MouseListener, MouseMot
 	private static final int screenHeight = 500;
 	private static final int screenWidth = 1000;
 	private static final String gameName = "";
+	enum Page {HOME, GAME};
+	Page page = Page.HOME;
 	public static void main(String[]args)
 	{
         JFrame frame = new JFrame();
@@ -26,6 +28,25 @@ public class Main extends JPanel implements KeyListener, MouseListener, MouseMot
         frame.addKeyListener(drawer);
         frame.addMouseListener(drawer);
         frame.addMouseMotionListener(drawer);
+	}
+	public void paint(Graphics screen)
+	{
+		if(page == Page.HOME)
+		{
+			drawHome(screen);
+		}
+		if(page == Page.GAME)
+		{
+			drawGame(screen);
+		}
+	}
+	public void drawHome(Graphics screen)
+	{
+		
+	}
+	public void drawGame(Graphics screen)
+	{
+		
 	}
 	public void mouseDragged(MouseEvent e) 
 	{

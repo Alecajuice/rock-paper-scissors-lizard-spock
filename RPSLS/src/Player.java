@@ -1,3 +1,5 @@
+import java.awt.Graphics;
+
 
 public class Player 
 {
@@ -7,8 +9,24 @@ public class Player
 	{
 		this.name = name;
 	}
+	public void draw(Graphics screen)
+	{
+		
+	}
 	public Element getElement(int index)
 	{
 		return team.getElement(index);
+	}
+	public Team getTeam() 
+	{
+		return team;
+	}
+	public String getName() 
+	{
+		return name;
+	}
+	public void setName(String name) 
+	{
+		this.name = name;
 	}
 }

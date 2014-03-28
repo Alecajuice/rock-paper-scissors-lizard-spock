@@ -42,6 +42,11 @@ public class Team
 		}
 	}
 	
+	public Element getElement(int index)
+	{
+		return team[index];
+	}
+	
 	public void delete(int index)
 	{
 		team[index] = null;
