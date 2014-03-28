@@ -45,7 +45,7 @@ public class Team
 				}
 			}
 		}
-		catch(Exception e)
+		catch(Exception e1)
 		{
 			//Team filled
 		}
