@@ -7,28 +7,19 @@ public class Team
 		
 	}
 	
-	public boolean battle(Team other)
+	public void battle(Team other)
 	{
-		int score = 0;
-		Element[] otherTeam = other.getTeam();
-		for(int i = 0; i < Math.max(otherTeam.length, team.length); i++)
+		for (int i = 0; i < Math.max(this.team.length, other.team.length); i++)
 		{
-			if(team[i].compare(otherTeam[i]))
+			if (this.team[i] != null)
 			{
-				score ++;
+				int j = (int)Math.round(((Math.random() + i - 1) * 3));
+				while(j < 0 || j > team.length - 1)
+				{
+					j = (int)Math.round(((Math.random() + i - 1) * 3));
+				}
+				this.team[i].compare(other.team[j]);
 			}
-			else if(otherTeam[i].compare(team[i]))
-			{
-				score --;
-			}
-		}
-		if(score > 0)
-		{
-			return true;
-		}
-		else
-		{
-			return false;
 		}
 	}
 	

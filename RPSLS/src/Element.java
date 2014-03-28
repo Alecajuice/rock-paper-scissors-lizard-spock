@@ -14,26 +14,30 @@ public class Element
 	}
 	public boolean compare(Element other)
 	{
-		if(this.iD == -1 && other.iD != -1)
-		{
-			return false;
-		}
-		if(this.iD != -1 && other.iD == -1)
+		if(other == null)
 		{
 			return true;
 		}
-		if(this.iD == -1 && other.iD == -1)
-		{
-			double i = Math.random();
-			if(i < 0.5)
-			{
-				return true;
-			}
-			else
-			{
-				return false;
-			}
-		}
+//		if(this.iD == -1 && other.iD != -1)
+//		{
+//			return false;
+//		}
+//		if(this.iD != -1 && other.iD == -1)
+//		{
+//			return true;
+//		}
+//		if(this.iD == -1 && other.iD == -1)
+//		{
+//			double i = Math.random();
+//			if(i < 0.5)
+//			{
+//				return true;
+//			}
+//			else
+//			{
+//				return false;
+//			}
+//		}
 		int gap = Math.abs(this.iD - other.iD);
 		if(gap == 0)
 		{
