@@ -11,7 +11,7 @@ public class Team
 	{
 		int score = 0;
 		Element[] otherTeam = other.getTeam();
-		for(int i = 0; i < Max(otherTeam.length, team.length)); i++)
+		for(int i = 0; i < Math.max(otherTeam.length, team.length); i++)
 		{
 			if(team[i].compare(otherTeam[i]))
 			{
