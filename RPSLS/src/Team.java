@@ -56,6 +56,11 @@ public class Team
 		team[index] = null;
 	}
 	
+	public void replace(int index, Element e)
+	{
+		team[index] = e;
+	}
+	
 	public Element[] getTeam()
 	{
 		return team;
