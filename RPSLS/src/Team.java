@@ -36,7 +36,14 @@ public class Team
 	{
 		try
 		{
-			team[team.indexOf(null)] = e;
+			for (Element el : team)
+			{
+				if (el == null)
+				{
+					el = e;
+					break;
+				}
+			}
 		}
 		catch(Exception e)
 		{
