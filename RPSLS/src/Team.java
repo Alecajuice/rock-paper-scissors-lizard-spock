@@ -61,8 +61,4 @@ public class Team
 	{
 		return team;
 	}
-
-	public Element getElement(int index) {
-		return team[index];
-	}
 }
